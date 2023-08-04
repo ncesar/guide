@@ -1,0 +1,39 @@
+.ProfilePage {
+  @apply justify-self-center max-w-3xl;
+
+  &__Title {
+    @apply pt-2 text-2xl;
+  }
+
+  &__SubTitle {
+    @apply font-thin text-xl leading-loose;
+  }
+
+  &__Followers {
+    @apply flex flex-row font-thin italic;
+  }
+}
+
+.Avatar {
+  @apply ring-4 ring-gray-500 ring-offset-2 rounded-3xl max-w-xs;
+
+  &__Image {
+    @apply rounded-3xl w-full;
+  }
+}
+
+.ProfileRepos {
+  @apply w-full px-20;
+
+  h3 {
+    @apply font-semibold mb-4;
+  }
+
+  &__Container {
+    @apply p-4 rounded h-full mb-16 max-h-96 overflow-auto bg-slate-50;
+  }
+
+  &__Item {
+    @apply flex flex-col justify-center p-4 px-8 border-y;
+  }
+}

@@ -1,6 +1,6 @@
 # GuideCX: Frontend Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Technology
 
@@ -20,7 +20,7 @@ npm install
 - setup environment variables
 
 ```
-cp .env.example .env
+cp .env.example .env.local
 ```
 
 - [Create a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) and save it to your `.env` file. The scopes you require depends on the type of data you're wanting to fetch. The following configuration is a good start:
