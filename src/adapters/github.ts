@@ -1,4 +1,3 @@
-import { DocumentNode } from 'graphql';
 import { GraphQLClient, Variables } from 'graphql-request';
 
 interface Options {
@@ -27,7 +26,7 @@ export class Github {
 
   gql<QueryType, VariableType extends Variables>(
     document: string,
-    variables?: VariableType
+    variables?: VariableType,
   ) {
     return this.client.request<QueryType, Variables>(document, variables);
   }

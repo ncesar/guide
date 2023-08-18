@@ -1,0 +1,88 @@
+.SearchUsersPage {
+  @apply container mx-auto p-4 max-w-2xl;
+
+  @keyframes brawlLeft {
+    20% {
+      transform: translateX(30px) translateY(-10px);
+    }
+    40% {
+      transform: translateX(-20px) translateY(20px);
+    }
+    60% {
+      transform: translateX(40px) translateY(-30px);
+    }
+    80% {
+      transform: translateX(-10px) translateY(10px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  
+  @keyframes brawlRight {
+    20% {
+      transform: translateX(-30px) translateY(10px);
+    }
+    40% {
+      transform: translateX(20px) translateY(-20px);
+    }
+    60% {
+      transform: translateX(-40px) translateY(30px);
+    }
+    80% {
+      transform: translateX(10px) translateY(-10px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  
+  .BrawlAnimationLeft {
+    animation: brawlLeft 1.5s ease-in-out;
+  }
+  
+  .BrawlAnimationRight {
+    animation: brawlRight 1.5s ease-in-out;
+  }
+  &__SearchContainer {
+    @apply mb-4 flex mt-6;
+  }
+
+  &__Wrapper {
+    @apply flex flex-col justify-center items-center;
+  }
+
+  &__Input {
+    @apply p-2 border border-gray-300 rounded mr-2 flex-grow;
+  }
+
+  &__Button {
+    @apply p-2 bg-blue-500 text-white rounded;
+  }
+
+  &__UserCount {
+    @apply text-xl mb-4;
+  }
+
+  &__UserList {
+    @apply flex flex-wrap -mx-2;
+  }
+
+  &__UserItem {
+    @apply transition-opacity duration-500 ease-in-out w-1/2 p-2;
+    opacity: 1;
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none; // Prevent interaction with hidden items
+    }
+  }
+
+  &__UserCard {
+    @apply border-2 border-custom-pink p-4 rounded h-44;
+  }
+
+  &__UserLink {
+    @apply text-blue-500;
+  }
+}

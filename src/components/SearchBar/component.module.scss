@@ -1,0 +1,6 @@
+.SearchContainer {
+  @apply mb-4 flex mt-6;
+  &__Input {
+    @apply p-2 border border-gray-300 rounded mr-2 flex-grow;
+  }
+}
