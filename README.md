@@ -1,57 +1,46 @@
-# GuideCX: Frontend Assessment
+<h1 align="center">
+  <br>
+  <br>
+  Github User Boxing with NextJS, GraphQL and Tailwind
+  <br>
+</h1>
 
-This project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h4 align="center">Small project done in 4 hours to play a little with these technologies like the users were in a boxing match</h4>
 
-## Technology
+<p align="center">
+  <a href="https://www.linkedin.com/in/cesarnascimentoo/">My LinkedIn</a> •
+  <a href="https://ncesar.com">My Website</a> •
+</p>
 
-- React
-- TypeScript
-- GraphQL (Apollo Client)
-- Tailwind CSS
+![screenshot](https://github.com/ncesar/guide/blob/master/smallgif.gif?raw=true)
 
-## Setup
+## Deployment
+See at https://guide.ncesar.com
 
-- install dependencies
+## How it works
 
+1. User types a Github username
+2. User selects two users
+3. The app compare between followers and stars number. Then it calculates the average value and returns the winner.
+4. The winner can be followed with the follow mutation.
+
+## Requirements
+1. Github GraphQL Api in .env
+
+## How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/ncesar/guide
+
+# Go into the repository
+$ cd guide
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev
 ```
-npm install
-```
-
-- setup environment variables
-
-```
-cp .env.example .env.local
-```
-
-- [Create a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) and save it to your `.env` file. The scopes you require depends on the type of data you're wanting to fetch. The following configuration is a good start:
-
-```
-  - repo
-    - repo_deployment
-    - public_repo
-  - user
-    - read:user
-    - user:email
-```
-
-![](https://i.imgur.com/8TUUi0D.jpg)
-
-
-- **Explore the Github GraphQL API**: If you're new to the Github GraphQL API, you may consider spending a few minutes exploring the public schema to get an idea of what data is available. See [Github GraphQL Explorer](https://docs.github.com/en/graphql/overview/explorer).
-
-## Problem
-
-You've got access to a lot of Github data. There's a placeholder component at [./src/containers/magic](./src/containers/magic) where you're free to build whatever you'd like, leveraging GraphQL Queries and/or Mutations on the Github GraphQL API.
-
-Some examples:
-
-- Search Repos
-- List which repos have been forked by your followers
-- Compare analytics between multiple repos
-- List all vulnerabilities of selected repos, filter by vulnerability type
-
-Here are some ground rules:
-
-- [ ] must have at least one query
-- [ ] don't spend any longer than 4 hours
-- [ ] use whatever UI or styling approaches you're comfortable with. This repo has been setup with `scss` and tailwindcss
